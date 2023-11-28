@@ -39,6 +39,7 @@ search.addEventListener('click', () => {
                     break
                 case 'Snow':
                     decsription.innerHTML = `Snow`
+                    document.body.style.backgroundImage = `url(/img/Snowy.png)`
                     break
                 case 'Clouds':
                     document.body.style.backgroundImage = `url(/img/Cloudy.png)`
