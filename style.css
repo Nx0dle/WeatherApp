@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: aqua;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+h1 {
+    font-size: 150px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#card .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 5vh 5vw;
+    gap: 5px;
+}
+
+#card .search input {
+    border-radius: 50px;
+    height: 50px;
+    width: 300px;
+    padding: 15px;
+    background-color: transparent;
+    border: 0;
+    color: azure;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#card .search input::placeholder {
+    color: azure;
+}
+
+#card .search input:focus {
+    outline: none;
+}
+
+#card .search button {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#card .error {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5vw;
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+#card .infos {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#card .base-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding: 5vh 5vw;
+    margin-top: 10vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+#card .base-info .city {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#card .base-info .temp {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#card .additional-info {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    gap: 5vw;
+    padding: 50px 50px;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    margin-right: 5vw;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+#card .additional-info .text span {
+    font-size: 25px;
+}
