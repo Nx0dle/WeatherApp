@@ -1,5 +1,6 @@
 const search = document.querySelector('#card .search button')
 const infoCard = document.querySelector('#card .infos')
+
 let date = document.querySelector('#card .city .current-date')
 const currentDate = new Date();
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -9,7 +10,8 @@ date.innerHTML = currentDate.toLocaleDateString('en-us', options)
 search.addEventListener('click', () => {
     const APIkey = 'b4436432bdc896730d0e1ae7563c4c9d'
     const city = document.querySelector('#card .search input').value
-    document.querySelector('#card .infos .city-name').innerHTML = `${city}`
+    const cityName = city.charAt(0).toUpperCase() + city.slice(1);
+    document.querySelector('#card .infos .city-name').innerHTML = `${cityName}`
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`).then(response => response.json()).then(json => {
 
@@ -31,6 +33,7 @@ search.addEventListener('click', () => {
     
             switch (json.weather[0].main) {
                 case 'Clear':
+                    document.body.style.backgroundImage = `url(/img/Sunny.png)`
                     decsription.innerHTML = `Clear`
                     break
                 case 'Rain':
@@ -61,4 +64,7 @@ search.addEventListener('click', () => {
             clouds.innerHTML = `<span>${json.clouds.all} %</span>`
         }
     })
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`).then(response => response.json()).then(jsonFuture => {
+        
+        })
 })
